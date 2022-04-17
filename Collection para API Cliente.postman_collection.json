@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "d2dda793-2e03-40df-8f60-5dcf6ba22424",
+		"name": "Collection para API Cliente",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nome\":\"Teste\",\r\n\"cpf\":\"985.616.080-48\",\r\n\"email\":\"kdklsls@gmail.com.br\",\r\n\"endereco\":\r\n    {\"cep\":\"33041-640\",\r\n    \"rua\": \"Rua Petrucio\", \r\n    \"numero\": \"123\",\r\n    \"bairro\": \"nades\",\r\n    \"complemento\": \"Ap 1\",\r\n    \"cidade\": \"Contagem\",\r\n    \"estado\":\"SP\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar todos Clientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar Cliente por CPF",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente/?cpf=985.616.080-48",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						""
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "985.616.080-48"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar Cliente por CPF",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente/deletar-por-cpf?cpf=985.616.080-48",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						"deletar-por-cpf"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "985.616.080-48"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar dados Cliente",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nome\":\"Teste\",\r\n\"cpf\":\"985.616.080-48\",\r\n\"email\":\"kdklsls@gmail\",\r\n\"endereco\":\r\n    {\"cep\":\"33041-640\",\r\n    \"rua\": \"Rua Petrucio\", \r\n    \"numero\": \"123\",\r\n    \"bairro\": \"nades\",\r\n    \"complemento\": \"Ap 1\",\r\n    \"cidade\": \"Contagem\",\r\n    \"estado\":\"SP\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/cliente/alterar-por-cpf?cpf=985.616.080-48",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"cliente",
+						"alterar-por-cpf"
+					],
+					"query": [
+						{
+							"key": "cpf",
+							"value": "985.616.080-48"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
